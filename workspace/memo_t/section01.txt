@@ -12,17 +12,16 @@
 
 02. 파이썬 설치하기
 	1. 컴퓨터에 폴더 생성
-		c:\dev\pythonbasic\Install
-		c:\dev\pythonbasic\workspace
+		c:\dev\pythonbasic\Install => 설치프로그램 저장
+		c:\dev\pythonbasic\workspace => 파이썬 코딩 파일 저장
 	2. 파이썬 설치하기 
-		- 설치파일은 install 폴더에 저장
 		- https://www.python.org/ 에서 최신버젼 다운로드후 기본 설치하기
-	3. visual Studio Code 2022 설치하기
-		- 설치파일은 install 폴더에 저장
+	3. IDE(Integrated Development Environment)-visual Studio Code 2022 설치하기
 
 03. 파이썬 실행하기
 	1. 명령프롬프트를 이용해 실행하기
-	2. IDLE를 이용해 실행하기
+	2. IDLE(Integrated Development and Learning Environment)를 이용해 실행하기
+
 
 ### MISSION ###
 - 파이썬은 1991년 2월 20일에 귀도 반 로섬이 발표한 고급 프로그래밍 언어입니다.
