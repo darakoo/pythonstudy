@@ -2,16 +2,26 @@
 현재문서 닫기 ctrl + F4
 
 자동완성 ctrl + space
-현재라인잘라내기 ctrl + x, ctrl + L
-
-열편집모드
-alt + 드래그, 
+현재라인잘라내기 ctrl + x
 
 열복사
 alt + shift + 방향키
 
 주석
-ctrl + k + c 
-ctrl + k + u
+ctrl + /
 
+줄 이동
+alt + 방향키
+
+실행
+ctrl + F5
+
+디버깅 실행
+F5
+
+열편집모드
+ctrl + shift + alt + 방향키
+
+열편집모드 해재
+Esc
 

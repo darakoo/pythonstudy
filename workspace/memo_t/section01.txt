@@ -12,15 +12,19 @@
 
 02. 파이썬 설치하기
 	1. 컴퓨터에 폴더 생성
-		c:\dev\pythonbasic\Install => 설치프로그램 저장
-		c:\dev\pythonbasic\workspace => 파이썬 코딩 파일 저장
+		c:\dev\pythonbasic\Install => 설치프로그램
+		c:\dev\pythonbasic\workspace => 파이썬 코딩 파일
+		c:\dev\pythonbasic\workspace\memo
+		c:\dev\pythonbasic\workspace\section01
 	2. 파이썬 설치하기 
 		- https://www.python.org/ 에서 최신버젼 다운로드후 기본 설치하기
 	3. IDE(Integrated Development Environment)-visual Studio Code 2022 설치하기
+		- 확장 => Python 설치
 
 03. 파이썬 실행하기
 	1. 명령프롬프트를 이용해 실행하기
 	2. IDLE(Integrated Development and Learning Environment)를 이용해 실행하기
+	3. Visual Studio Code 를 이용해 실행하기
 
 
 ### MISSION ###
