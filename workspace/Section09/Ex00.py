@@ -25,7 +25,9 @@ print(abs(10))
 print(abs(-10))
 
 # divmod() : 몫과 나머지를 한쌍의 튜플로 반환 
-print('divmod(10,3) =>', divmod(10,3))
+a = divmod(10,3)
+print(a)
+print(a[0])
 
 # float() : 전달된 인수를 float로 반환
 # int() : 전달된 인수를 int로 반환
@@ -65,6 +67,7 @@ print(len(a))
 
 # sorted() : 반복가능객체의 정렬 결과를 반환
 a = [1,3,9,3,6,7,3]
+a = (1,3,9,3,6,7,3)
 print(sorted(a))
 # print(sorted(a), reverse=True)
 

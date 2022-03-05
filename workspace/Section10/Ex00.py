@@ -7,10 +7,10 @@ s = 'best of best'
 print(s.count('best'))
 print(s.count('best', 5))
 
-# find() : 찾고자 하는 문자열이 있으면 그 문자열이 처음으로 나온 인덱스를 반환, 없으면 -1
+# find() : 찾고자 하는 문자열의 인덱스를 반환, 없으면 -1
 s = 'apple'
-print("s.find('p') : ", s.find('l'))
-print("s.find('z') : ", s.find('z'))
+print(s.find('l'))
+print(s.find('z'))
 s = 'best of best'
 print("s.find('best', 5) : ", s.find('best', 5))
 
@@ -29,9 +29,9 @@ print(s)
 s = '+'.join(['a', 'b', 'c', 'd', 'e'])
 print(s)
 
-# split() : 하나의 문자열을 여러개의 문자열로 분리하여 리스트로 반환
+# split() : 하나의 문자열을 분리하여 리스트로 반환
 s = 'Life is too short'
-s = s.split(' ')
+s = s.split()
 print(s)
 s = '010-1111-2222'
 s = s.split('-')
