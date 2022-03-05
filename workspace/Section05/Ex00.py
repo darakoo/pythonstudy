@@ -5,9 +5,9 @@ a = 1
 a = 3.14
 a = True
 a = 'a'
-a = 'hello'
 
 # 인덱싱과 슬라이싱
+a = 'hello'
 print(a[0])
 print(a[0:3])
 print(a[3:])
@@ -18,6 +18,8 @@ a.append(1)
 a.append('hello')
 print(a)
 a = tuple()
+a = (1,2,3)
+print('a[0:2]:', a[0:2])
 a = set()
 a.add(10)
 a.add('20')
@@ -51,16 +53,25 @@ print(f'a={a}, b={b}')
 # 대입
 a += 10
 # 관계
+a, b = -1, 20
+print('a != b:', a != b)
+print('a == b:', a == b)
+print('a >= b:', a >= b)
+
 # 논리
+a, b = -1, 20
+print('a > 0 and b > 0 : ', a > 0 and b > 0)
+
 # 비트
 # 시퀀스
+print('hello' * 3)
 # 기타
 a, b = 10, 3
 result = (a-b) if(a>=b) else (b-a)
 print(result)
 
 # 조건문
-if (a>=b):
+if (a>=b and a > 0):
     result = a-b
 else:
     result = b-a

@@ -34,6 +34,10 @@ print()
 
 # 비시퀀스와 for문
 # for문과 세트
+for item in {'a', 'b', 'c'}:
+    print(item)
+
+# for문과 딕셔너리
 person = {  'name':'홍길동', 
             'age':25
             }
@@ -44,5 +48,3 @@ for key in person:
     print(person[key])
 
 
-
-# for문과 딕셔너리

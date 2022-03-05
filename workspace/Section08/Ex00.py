@@ -2,14 +2,14 @@
 # break 위치 중요, 
 n = 1
 while True:
-    if n == 10:
+    if n == 5:
         break
 
     print(n)
     n += 1
 
 # continue 문
-for n in range(1, 31):
+for n in range(1, 10):
     if n % 3 == 0: # 3의 배수인지 검사합니다.
         continue
     print(n)
