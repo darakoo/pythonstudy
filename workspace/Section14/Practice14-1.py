@@ -1,3 +1,5 @@
+# 하지 않음
+
 while True:
     filename = input('복사할 파일명을 입력하세요 >>> ')
     extname = filename[filename.rfind('.') + 1:]
