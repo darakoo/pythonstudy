@@ -2,7 +2,7 @@
 # converter.py 파일을 생성한다. 소스는 전달
 
 ##### 모듈사용
-# case1:
+# case1 : converter 모듈 import
 import converter
 
 pounds = converter.gram_to_pounds(1000)
@@ -10,7 +10,8 @@ print('pounds:', pounds)
 miles = converter.kilometer_to_miles(150)
 print('miles:', miles)
 
-# case2 : 함수 사용시 모듈명을 기재하지 않아도 된다.
+# case2 : converter 모듈 import *
+# 모듈의 함수 사용시 모듈명을 기재하지 않아도 된다.
 from converter import *
 pounds = gram_to_pounds(1000)
 print('pounds:', pounds)
@@ -61,7 +62,7 @@ print('random.sample(s, 1):', random.sample(s, 1))
 
 # random.sample(시퀀스자료형, 갯수) 
 # 로또 번호 생성
-print('로또:', random.sample(range(1, 46), 6))
+print('로또:', random.sample(range(1, 47), 6))
 
 # random.shuffle(수정가능한시쿼스자료형)
 # 주의 : 반환값이 없으며 자료형의 값을 변경 시킨다.

@@ -14,7 +14,7 @@ for num in range(1, 10000001):
 end = datetime.now()
 
 elapse = end - start
-elapse = elapse.total_seconds()
+elapse = elapse.total_seconds()    # total_seconds() 함수를 통해 소요된 시간을 초단위로 변경한다.
 
-print('총 합은 {}입니다.'.format(total))
+print('총 합은 {}입니다.'.format(total, ','))
 print('총 {}초가 소요되었습니다.'.format(elapse))

@@ -1,5 +1,5 @@
 # [문제]
-# 1~100 사이의 정수를 알아 맞춥니다.
+# 임의로 생성된 1~100 사이의 정수 하나를 알아 맞춥니다.
 # [실행예]
 # UpDown게임을 시작합니다.
 # 어떤 값일까요? >>> 30
@@ -20,7 +20,6 @@ import time
 import math
 
 answer = random.randint(1, 100)
-
 print('UpDown게임을 시작합니다.')
 start = time.time()
 while True:
