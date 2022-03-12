@@ -1,3 +1,5 @@
+# 타이핑하면서 작성해본다.
+
 class Computer:
 
     def set_spec(self, cpu, ram, vga, ssd):
