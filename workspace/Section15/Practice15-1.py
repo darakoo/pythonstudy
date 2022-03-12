@@ -34,6 +34,9 @@ book2 = Book()
 book1.set_info('파이썬', '민경태')
 book2.set_info('어린왕자', '생텍쥐페리')
 
-book_list = [book1, book2]
-for book in book_list:
-    book.print_info()
+book1.print_info()
+book2.print_info()
+
+# book_list = [book1, book2]
+# for book in book_list:
+#     book.print_info()

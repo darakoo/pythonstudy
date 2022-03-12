@@ -26,6 +26,7 @@ student_info(name2, department2, professor2, phone2, address2, grade2)
 
 ##### 학생정보를 객체를 사용하여 변경시
 # 코드를 간략히 할 수 있다.
+# Naming Rule 설명도 한다.
 class Student:
     pass
 
@@ -67,3 +68,4 @@ print(boy.address)
 
 ##### 기본예제 01
 
+##### 응용예제 분석하기

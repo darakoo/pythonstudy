@@ -1,3 +1,6 @@
+# [문제]
+# 다음은 생성자와 소멸자를 이용해서 서비스 안내 메세지를 출력하는 프로그램입니다.
+
 class Service:
     
     def __init__(self, service):

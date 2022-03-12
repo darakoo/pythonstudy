@@ -1,13 +1,12 @@
 # [문제]
-# 실행해보기
+# 실행해보기 skip
 # 사용자로부터 'HH:mm:ss' 형식의 시간을 입력받아서 이를 Watch 클래스의 hour, minute, second 인스턴스 변수에 저장하세요.
 # [실행예]
 
 
 class Watch:
 
-    def set_time(self):
-        now = input('시간을 입력하세요 >>> ')
+    def set_time(self, now):
         hms = now.split(':')
         self.hour = int(hms[0])
         self.minute = int(hms[1])
@@ -38,8 +37,8 @@ class Watch:
 
 
 watch = Watch()
-watch.set_time()
-watch.add_hour(int(input('계산할 시간을 입력하세요 >>> ')))
-watch.add_minute(int(input('계산할 분을 입력하세요 >>> ')))
-watch.add_second(int(input('계산할 초를 입력하세요 >>> ')))
+watch.set_time(input('현재 시간을 입력하세요.(예시:15:30:29) >>> '))
+watch.add_hour(int(input('더할 시간을 입력하세요 >>> ')))
+watch.add_minute(int(input('더할 분을 입력하세요 >>> ')))
+watch.add_second(int(input('더할 초를 입력하세요 >>> ')))
 watch.see()

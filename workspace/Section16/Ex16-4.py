@@ -1,3 +1,6 @@
+# [문제]
+# 원두를 저장하는 Coffee 클래스와 원두에 물을 썩은 Espresso 클래스를 상속 관계로 구현하였습니다.
+
 class Coffee:
 
     def __init__(self, bean):
@@ -5,7 +8,6 @@ class Coffee:
 
     def coffee_info(self):
         print('원두: {}'.format(self.bean))
-
 
 class Espresso(Coffee):
 
@@ -16,7 +18,6 @@ class Espresso(Coffee):
     def espresso_info(self):
         super().coffee_info()
         print('물: {}ml'.format(self.water))
-
 
 coffee = Espresso('콜롬비아', 30)
 coffee.espresso_info()

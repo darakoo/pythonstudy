@@ -1,3 +1,7 @@
+# [문제]
+# 분석하기
+
+
 class Song:
 
     def set_song(self, title, genre):
@@ -23,6 +27,7 @@ class Singer:
 
 song = Song()
 song.set_song('취중진담', '발라드')
+
 singer = Singer()
 singer.set_singer('김동률')
 singer.hit_song(song)

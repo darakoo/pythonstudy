@@ -1,3 +1,26 @@
+# [문제]
+# 가게 의 매출을 구할 수 있는 Shop 클래스를 완성 하세요
+
+class Shop:
+
+    total = 0
+    menu_list = [
+        {'떡볶이': 3000},
+        {'순대': 3000},
+        {'튀김': 500},
+        {'김밥': 2000}
+    ]
+    
+    @classmethod
+    def sales(cls, food, count):
+        pass
+
+Shop.sales('떡볶이', 1)  # 떡볶이를 1개 판매
+
+print('매출: {}원'.format(???))  # 매출
+
+
+##########################
 class Shop:
 
     total = 0
