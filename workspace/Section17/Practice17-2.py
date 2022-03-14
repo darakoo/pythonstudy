@@ -1,3 +1,5 @@
+# 소스 분석하기
+
 import random
 
 class UpDown:
