@@ -1,3 +1,6 @@
+# [문제]
+# 네이버 영화 사이트>영화랭킹>랭킹>*영화인* 메뉴를 통해서 영화인 랭킹을 1위~50위까지 출력하세요.
+
 from bs4 import BeautifulSoup
 import requests
 

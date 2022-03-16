@@ -1,6 +1,5 @@
 import sys
 
-
 class Person:
 
     def __init__(self, name, phone, addr):
@@ -17,6 +16,33 @@ class AddressBook:
     def __init__(self):
         self.address_list = []
         self.file_reader()
+
+    def menu():  # self 매개변수가 없는 정적 메소드
+        print('-' * 30)
+        print('신규 주소록 등록은 1번')
+        print('기존 주소록 삭제는 2번')
+        print('기존 주소록 수정은 3번')
+        print('주소록 검색은 4번')
+        print('전체 주소록 출력은 5번')
+        print('프로그램 종료는 0번')
+        print('-' * 30)
+        choice = int(input('수행할 작업을 숫자로 입력하세요 >>> '))
+        return choice
+
+    def run(self):
+        while True:
+            choice = AddressBook.menu()
+            if choice == 0: self.exit()
+            elif choice == 1: self.insert()
+            elif choice == 2: self.delete()
+            elif choice == 3: self.update()
+            elif choice == 4: self.search()
+            elif choice == 5: self.printAll()
+            else: print('없는 명령입니다. 확인 후 다시 입력하세요.')
+    
+    def exit(self):
+        print('프로그램을 종료합니다.')
+        sys.exit()
 
     def file_reader(self):
         try:
@@ -45,33 +71,6 @@ class AddressBook:
                 file.write('{},{},{}\n'.format(person.name, person.phone, person.addr))
             file.close()
 
-    def menu():  # self 매개변수가 없는 정적 메소드
-        print('-' * 30)
-        print('신규 주소록 등록은 1번')
-        print('기존 주소록 삭제는 2번')
-        print('기존 주소록 수정은 3번')
-        print('주소록 검색은 4번')
-        print('전체 주소록 출력은 5번')
-        print('프로그램 종료는 0번')
-        print('-' * 30)
-        choice = int(input('수행할 작업을 숫자로 입력하세요 >>> '))
-        return choice
-
-    def exit(self):
-        print('프로그램을 종료합니다.')
-        sys.exit()
-
-    def run(self):
-        while True:
-            choice = AddressBook.menu()
-            if choice == 0: self.exit()
-            elif choice == 1: self.insert()
-            elif choice == 2: self.delete()
-            elif choice == 3: self.update()
-            elif choice == 4: self.search()
-            elif choice == 5: self.printAll()
-            else: print('없는 명령입니다. 확인 후 다시 입력하세요.')
-    
     def insert(self):
         print('=== 신규 주소록 생성 ===')
         name = input('등록할 이름 입력 >>> ')
@@ -154,5 +153,5 @@ class AddressBook:
 
 
 my_app = AddressBook()  # my_app 인스턴스 생성
-# my_app.run()  # my_app 실행
+my_app.run()  # my_app 실행
 my_app.printAll()

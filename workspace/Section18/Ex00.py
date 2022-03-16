@@ -34,5 +34,23 @@ print(response.text)
 #============== 기본예제 01
 
 #============== 웹 페이지 분석 및 추출하기
+import requests
+from bs4 import BeautifulSoup
+
+url = 'https://www.naver.com'
+response = requests.get(url)
+html = response.text
+
+# BeautifulSoup 객체 생성
+soup = BeautifulSoup(html, 'html.parser')
+print(soup)
+
+#=============== html 이해
+# 1. hello.html 파일 만들고 문법 이해하기
+# 2. class, id 속성의 차이 이해하기 (https://bangu4.tistory.com/26 참고)
+# 3. naver 사이트 접속 => F12 개발자 도구에서 소스 확인하기
+
+#============== 기본예제 02
+#============== 응용예제
 
 
