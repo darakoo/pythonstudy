@@ -7,13 +7,11 @@ import requests
 url = 'https://movie.naver.com/movie/sdb/rank/rpeople.nhn'
 response = requests.get(url)
 html = response.text
-
 soup = BeautifulSoup(html, 'html.parser')
-result_list = soup.find_all('td', class_='title')
-# result_list = soup.find_all('td', attrs={'class': 'title'})
-movie_in = []
-for result in result_list:
-    movie_in.append(result.text.strip())
-                    
-for person in movie_in:
-    print(person)
+
+# 영화인 랭킹 1~50위
+ranking50_list = soup.find_all('td', class_='title')
+# ranking50_list = soup.find_all('td', attrs={'class': 'title'})
+for result in ranking50_list:
+    print(result.text.strip())
+
