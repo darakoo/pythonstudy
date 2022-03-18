@@ -1,3 +1,12 @@
+# [문제]
+# 주소록을 관리하는 프로그램입니다. 아래 지시사항을 구현하세요.
+# 1. 등록 로직 구현하기
+# 2. 검색 로직 구현하기
+# 3. phone 을 tel 로 변경하기
+# 4. email 정보 추가하기
+# 5. 주소록 파일명을 클래스 변수로 처리하기 file_name ='./Section20/addressBook01.csv'
+#    - self.file_name 으로 읽으면 된다.
+
 import sys
 
 class Person:
@@ -12,6 +21,7 @@ class Person:
 
 
 class AddressBook:
+    file_name ='./Section20/addressBook01.csv'
 
     def __init__(self):
         self.address_list = []
@@ -47,10 +57,10 @@ class AddressBook:
 
     def file_reader(self):
         try:
-            file = open('addressBook.csv', 'rt')  # addrBook.csv 파일이 없으면 예외 발생
-        except:  # 예외 처리 (addressBook.csv 파일이 없을 때)
+            file = open('addressBook.csv', 'rt')  # 파일이 없으면 예외 발생
+        except:  # 예외 처리 (파일이 없을 때)
             print('addressBook.csv 파일이 없습니다.')
-        else:  # 정상 처리 (addressBook.csv 파일이 있을 때)
+        else:  # 정상 처리 (파일이 있을 때)
             while True:
                 buffer = file.readline()
                 if not buffer:
@@ -74,15 +84,7 @@ class AddressBook:
 
     def insert(self):
         print('=== 신규 주소록 생성 ===')
-        name = input('등록할 이름 입력 >>> ')
-        phone = input('등록할 전화번호 입력 >>> ')
-        addr = input('등록할 주소 입력 >>> ')
-        if name and phone and addr:  # 모두 입력되었다면
-            self.address_list.append(Person(name, phone, addr))  # 삽입
-            self.file_generator()
-            print('신규 주소록이 정상적으로 생성되었습니다.')
-        else:  # 누락된 입력이 하나라도 있으면 삽입 실패
-            print('입력값이 부족하여 주소록이 생성되지 않았습니다.')
+        # 구현하세요.
 
     def delete(self):
         print('=== 기존 주소록 삭제 ===')
@@ -138,17 +140,7 @@ class AddressBook:
 
     def search(self):  # 추가 작업 문제
         print('=== 주소록 검색 ===')
-        name = input('찾을 이름을 입력 >>> ')
-        if not name:
-            print('입력된 이름이 없어 검색을 취소합니다.')
-            return
-        exist = False
-        for person in self.address_list:
-            if name == person.name:
-                person.info()
-                exist = True
-        if not exist:
-            print('{}의 정보가 없습니다.'.format(name))
+        # 구현하세요.
 
 # ↑ class AddressBook 종료 ↑
 

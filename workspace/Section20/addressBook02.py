@@ -2,16 +2,18 @@ import sys
 
 class Person:
 
-    def __init__(self, name, phone, addr):
+    def __init__(self, name, tel, addr, email):
         self.name = name
-        self.phone = phone
+        self.tel = tel
         self.addr = addr
+        self.email = email
 
     def info(self):
-        print('{}, {}, {}'.format(self.name, self.phone, self.addr))
+        print('{}, {}, {}, {}'.format(self.name, self.tel, self.addr, self.email))
 
 
 class AddressBook:
+    file_name ='./Section20/addressBook01.csv'
 
     def __init__(self):
         self.address_list = []
@@ -47,38 +49,40 @@ class AddressBook:
 
     def file_reader(self):
         try:
-            file = open('addressBook.csv', 'rt')  # addrBook.csv 파일이 없으면 예외 발생
-        except:  # 예외 처리 (addressBook.csv 파일이 없을 때)
-            print('addressBook.csv 파일이 없습니다.')
-        else:  # 정상 처리 (addressBook.csv 파일이 있을 때)
+            file = open(self.file_name, 'rt')  # 파일이 없으면 예외 발생
+        except:  # 예외 처리 (파일이 없을 때)
+            print(' 파일이 없습니다.')
+        else:  # 정상 처리 (파일이 있을 때)
             while True:
                 buffer = file.readline()
                 if not buffer:
                     break
                 name = buffer.split(',')[0]
-                phone = buffer.split(',')[1]
-                addr = buffer.split(',')[2].rstrip('\n')
-                self.address_list.append(Person(name, phone, addr))
-            print('addressBook.csv 파일을 로드했습니다.')
+                tel = buffer.split(',')[1]
+                addr = buffer.split(',')[2]
+                email = buffer.split(',')[3].rstrip('\n')
+                self.address_list.append(Person(name, tel, addr, email))
+            print(' 파일을 로드했습니다.')
             file.close()
 
     def file_generator(self):
         try:
-            file = open('addressBook.csv', 'wt')  
+            file = open(self.file_name, 'wt')  
         except:
-            print('addressBook.csv 파일을 생성할 수 없습니다.')
+            print(' 파일을 생성할 수 없습니다.')
         else:
             for person in self.address_list:
-                file.write('{},{},{}\n'.format(person.name, person.phone, person.addr))
+                file.write('{},{},{}\n'.format(person.name, person.tel, person.addr, person.email))
             file.close()
 
     def insert(self):
         print('=== 신규 주소록 생성 ===')
         name = input('등록할 이름 입력 >>> ')
-        phone = input('등록할 전화번호 입력 >>> ')
+        tel = input('등록할 전화번호 입력 >>> ')
         addr = input('등록할 주소 입력 >>> ')
-        if name and phone and addr:  # 모두 입력되었다면
-            self.address_list.append(Person(name, phone, addr))  # 삽입
+        email = input('등록할 이메일 입력 >>> ')
+        if name and tel and addr and email:  # 모두 입력되었다면
+            self.address_list.append(Person(name, tel, addr, email))  # 삽입
             self.file_generator()
             print('신규 주소록이 정상적으로 생성되었습니다.')
         else:  # 누락된 입력이 하나라도 있으면 삽입 실패
@@ -93,7 +97,7 @@ class AddressBook:
         deleted = False
         for i, person in enumerate(self.address_list):
             if name == self.address_list[i].name:
-                print('검색된 전화번호가 "{}"입니다.'.format(self.address_list[i].phone))
+                print('검색된 전화번호가 "{}"입니다.'.format(self.address_list[i].tel))
                 if input('삭제할까요?(Y/N) >>> ').upper() != 'Y':
                     continue  # for문으로 되돌아가서 다음 사람을 검색
                 self.address_list.pop(i)  # 삭제
@@ -113,12 +117,12 @@ class AddressBook:
         updated = False
         for i, person in enumerate(self.address_list):
             if name == self.address_list[i].name:
-                print('검색된 전화번호가 "{}"입니다.'.format(self.address_list[i].phone))
+                print('검색된 전화번호가 "{}"입니다.'.format(self.address_list[i].tel))
                 if input('수정할까요?(Y/N) >>> ').upper() != 'Y':
                     continue  # for문으로 되돌아가서 다음 사람을 검색
-                new_phone = input('변경할 전화번호 입력 >>> ')
-                if new_phone:  # 입력이 있으면
-                     self.address_list[i].phone = new_phone  # 입력된 내용으로 변경
+                new_tel = input('변경할 전화번호 입력 >>> ')
+                if new_tel:  # 입력이 있으면
+                     self.address_list[i].tel = new_tel  # 입력된 내용으로 변경
                 new_addr = input('변경할 주소 입력 >>> ')
                 if new_addr:
                     self.address_list[i].addr = new_addr
