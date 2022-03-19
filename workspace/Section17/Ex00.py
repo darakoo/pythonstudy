@@ -103,9 +103,9 @@ except HourError as e:
 
 # 응용 예제 
 
-# Section 20
-# ./addressBook01.csv
-# ./Section20/addressBook01.py
-# 위 파일 전달
+#============== section20 주소록 프로젝트
+구글 파이썬/프로젝트개요/주소록프로젝트개요 ppt 설명 
+addressBook.py : 완성본
+addressBook01.py : 교육생 문제풀이용 전달
+addressBook01.csv : 교육생 문제풀이용 전달
 
-# ppt 설명, 문제 설명

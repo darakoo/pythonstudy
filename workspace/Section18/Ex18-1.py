@@ -4,7 +4,7 @@
 
 import requests
 
-url = 'https://movie.naver.com/movie/running/current.naver#'
+url = 'https://movie.naver.com/movie/running/current.naver'
 param = {'code': 190991}
 response = requests.get(url, params=param)
 print(response.text)

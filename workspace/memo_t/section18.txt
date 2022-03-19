@@ -5,7 +5,7 @@
     1. 크롬 설치
     2. requests 라이브러리 설치하기
     3. BeautifulSoup 패키지 설치하기
-    - 모듈 => 패키지 => 라이브러리 순으로 범위가 확대된다.
+    - 라이브러리 > 패키지 > 모듈
     - 명령 프롬프트에서 실행
     pip install requests
     pip install BeautifulSoup4
