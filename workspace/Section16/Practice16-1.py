@@ -14,23 +14,23 @@ class Person:
 
     def __init__(self, name):
         self.name = name
-        # 클래스 변수인 population 값을 1 증가 시킨다.
-        print('{} is born.'.format(???))
+        # 객체가 생성될 때 클래스 변수인 population 값을 1 누적 시킨다.
+        # ???
+        print('{} is born.'.format(self.name))
 
     def __del__(self):
-        # 클래스 변수인 population 값을 1 감소 시킨다.
-        print('{} is dead.'.format(???))
+        # 객체가 소멸될때 클래스 변수인 population 값을 1 감소 시킨다.
+        # ???
+        print('{} is dead.'.format(self.name))
 
-    @classmethod
-    def get_population(cls):
-        return cls.population
+    # population을 반환하는 get_population() 클래스 메소드를 구현 하세요.
+    # get_population() ???
 
 
 man = Person('james')
 woman = Person('emily')
 print('전체 인구수: {}명'.format(Person.get_population()))
 del man
-del woman
 print('전체 인구수: {}명'.format(Person.get_population()))
 
 #####################################

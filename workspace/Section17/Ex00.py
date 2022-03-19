@@ -1,9 +1,10 @@
-'''
+
 # 예외 종류(예외 발생하기)
 # ZeroDivisionError: division by zero
 # 0으로 나눌 수 없다.
 print(2/0)
 
+'''
 # IndexError: list index out of range
 a = [1, 2, 3]
 print(a[3])
@@ -99,3 +100,12 @@ except HourError as e:
     print(e)
 
 # 기본 예제 04
+
+# 응용 예제 
+
+# Section 20
+# ./addressBook01.csv
+# ./Section20/addressBook01.py
+# 위 파일 전달
+
+# ppt 설명, 문제 설명

@@ -21,14 +21,13 @@ class Person:
 
 
 class AddressBook:
-    file_name ='./Section20/addressBook01.csv'
 
     def __init__(self):
         self.address_list = []
         self.file_reader()
         print(self.address_list)
 
-    def menu():  # self 매개변수가 없는 정적 메소드
+    def menu():
         print('-' * 30)
         print('신규 주소록 등록은 1번')
         print('기존 주소록 삭제는 2번')
@@ -138,7 +137,7 @@ class AddressBook:
             person.info()
         print('총 {}개의 주소록이 있습니다.'.format(len(self.address_list)))
 
-    def search(self):  # 추가 작업 문제
+    def search(self):
         print('=== 주소록 검색 ===')
         # 구현하세요.
 

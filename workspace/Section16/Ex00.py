@@ -1,4 +1,4 @@
-'''
+
 ##### 생성자
 
 # 지금까지 클래스를 이용하여 객체를 생성한 방법
@@ -33,6 +33,7 @@ del candy
 
 ##### 기본예제 01 02 소스 띄우고 타이핑하기
 
+
 ##### 클래스 변수
 # 교재 참고
 class Korean:
@@ -45,8 +46,15 @@ class Korean:
         self.age = age
         self.address = address
 
+    # 클래스안의 함수에서 클래스 변수를 접근 할때
+    def print_country(self):
+        print(f'country is {self.country}')
+        print('country is', self.country)
+        print('country is {}'.format(self.country))
+
 man = Korean('gildong', 25, 'goyang si')
 woman = Korean('minji', 25, 'goyang si')
+
 
 # 인스턴스 변수 접근 방법 : 클래스 이름으로는 접근 안됨
 print(man.name)
@@ -99,7 +107,7 @@ Korean.slogan()
 
 ##### 기본예제 03
 
-'''
+
 ##### 상속
 # 어떤 클래스가 가지고 있는 기능을 그래로 물려받아서 사용할때 상속받는다라고 한다.
 # 상속 관계 있을 때/ 없을 때 기능 비교 
@@ -133,3 +141,4 @@ student.study()
 
 
 
+'''
