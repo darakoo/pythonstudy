@@ -1,3 +1,39 @@
+==========환경설정
+[자동 완성기능 안될 때]
+    1. settings.jon 파일 열기
+    2. 아래 코드 추가하기
+        - "python.languageServer": "Pylance",
+
+===========단축키
+새파일 만들기 ctrl + n
+현재문서 닫기 ctrl + F4
+
+자동완성 ctrl + space
+현재라인잘라내기 ctrl + x
+
+열복사
+alt + shift + 방향키
+
+주석
+ctrl + /
+
+줄 이동
+alt + 방향키
+
+실행
+ctrl + F5
+
+디버깅 실행
+F5
+
+열편집모드
+ctrl + shift + alt + 방향키
+
+열편집모드 해재
+Esc
+
+
+==========Naming Rule
 
 1. 함수명
 - 소문자 + 밑줄

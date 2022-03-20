@@ -105,28 +105,28 @@ label = ['good', 'bad', 'normal']
 axes.pie(data, labels = label, autopct = '%d%%') # %d:정수표시, %%:두개사용한 이유는 %가 이스케이프문자
 plt.axis('equal') # 일반 원
 plt.show()
-
+'''
 #===== wordcloud() : 문자 그래프
 # pip install wordcloud  설치하기
-# 소스 전달 후 분석
+# 아래 소스 전달 후 분석(한글처리 주석 빼고전달)
 
 import matplotlib.pyplot as plt
 import wordcloud
 
 words = {
-    '파이썬':30,
+    'python':30,
     'java':3,
     'C':7,
     'html':9,
     'jsp':12,
 }
 wc = wordcloud.WordCloud()
-# wc = wordcloud.WordCloud(font_path='C:/Windows/Fonts/HMFMPYUN.TTF')
+# wc = wordcloud.WordCloud(font_path='C:/Windows/Fonts/HMFMPYUN.TTF') #한글처리
 cloud = wc.generate_from_frequencies(words)
 plt.figure()
 plt.imshow(cloud)
 plt.show()
-'''
+
 
 #===== 응용예제 : 소스 전달 후 풀이
 
