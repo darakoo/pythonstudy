@@ -1,14 +1,2 @@
-
-# skip
-
-n = 1
-while n <= 10:
-    print(n, end=' ')
-    n += 1
-
-print()
-
-n = 10
-while n >= 1:
-    print(n, end=' ')
-    n -= 1
+# 기본예제 일부만 풀고 응용 예제는 skip 한다.
+# for 문 먼저 하고 기타 제어문에서 while을 자세히 설명한다.
