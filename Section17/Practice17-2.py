@@ -1,4 +1,4 @@
-# updown 게임 소스 분석하고 주석달기
+# updown 게임
 
 import random
 

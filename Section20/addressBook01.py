@@ -1,11 +1,9 @@
 # [문제]
 # 주소록을 관리하는 프로그램입니다. 아래 지시사항을 구현하세요.
-# 1. 등록 로직 구현하기
-# 2. 검색 로직 구현하기
-# 3. phone 을 tel 로 변경하기
-# 4. email 정보 추가하기
-# 5. 주소록 파일명을 클래스 변수로 처리하기 file_name ='./Section20/addressBook01.csv'
-#    - self.file_name 으로 읽으면 된다.
+# 1. phone 을 tel 로 변경하기
+# 2. addressBook.csv 파일명을 클래스 변수(file_name)로 변경하기
+# 3. email 속성 추가하기
+#    파일예시) 홍길순,02-5656-5656,은평구,alice@sbs.co.kr
 
 import sys
 
@@ -19,7 +17,6 @@ class Person:
     def info(self):
         print('{}, {}, {}'.format(self.name, self.phone, self.addr))
 
-
 class AddressBook:
 
     def __init__(self):
@@ -27,7 +24,8 @@ class AddressBook:
         self.file_reader()
         print(self.address_list)
 
-    def menu():
+    # self 매개변수가 없는 정적 메소드
+    def menu():  
         print('-' * 30)
         print('신규 주소록 등록은 1번')
         print('기존 주소록 삭제는 2번')
@@ -55,10 +53,11 @@ class AddressBook:
         sys.exit()
 
     def file_reader(self):
+        file_name = "./Section20/addressBook01.csv"
         try:
-            file = open('addressBook.csv', 'rt')  # 파일이 없으면 예외 발생
+            file = open(file_name, 'rt', encoding='utf8')  # addrBook.csv 파일이 없으면 예외 발생
         except:  # 예외 처리 (파일이 없을 때)
-            print('addressBook.csv 파일이 없습니다.')
+            print('파일이 없습니다.')
         else:  # 정상 처리 (파일이 있을 때)
             while True:
                 buffer = file.readline()
@@ -68,22 +67,30 @@ class AddressBook:
                 phone = buffer.split(',')[1]
                 addr = buffer.split(',')[2].rstrip('\n')
                 self.address_list.append(Person(name, phone, addr))
-            print('addressBook.csv 파일을 로드했습니다.')
+            print('파일을 로드했습니다.')
             file.close()
 
     def file_generator(self):
         try:
-            file = open('addressBook.csv', 'wt')  
+            file = open('./section20/addressBook.csv', 'wt', encoding='utf8')  
         except:
-            print('addressBook.csv 파일을 생성할 수 없습니다.')
+            print('파일을 생성할 수 없습니다.')
         else:
             for person in self.address_list:
-                file.write('{},{},{}\n'.format(person.name, person.phone, person.addr))
+                file.write(f'{person.name},{person.phone},{person.addr}\n')
             file.close()
 
     def insert(self):
         print('=== 신규 주소록 생성 ===')
-        # 구현하세요.
+        name = input('등록할 이름 입력 >>> ')
+        phone = input('등록할 전화번호 입력 >>> ')
+        addr = input('등록할 주소 입력 >>> ')
+        if name and phone and addr:  # 모두 입력되었다면
+            self.address_list.append(Person(name, phone, addr))  # 삽입
+            self.file_generator()
+            print('신규 주소록이 정상적으로 생성되었습니다.')
+        else:  # 누락된 입력이 하나라도 있으면 삽입 실패
+            print('입력값이 부족하여 주소록이 생성되지 않았습니다.')
 
     def delete(self):
         print('=== 기존 주소록 삭제 ===')
@@ -137,9 +144,19 @@ class AddressBook:
             person.info()
         print('총 {}개의 주소록이 있습니다.'.format(len(self.address_list)))
 
-    def search(self):
+    def search(self):  # 추가 작업 문제
         print('=== 주소록 검색 ===')
-        # 구현하세요.
+        name = input('찾을 이름을 입력 >>> ')
+        if not name:
+            print('입력된 이름이 없어 검색을 취소합니다.')
+            return
+        exist = False
+        for person in self.address_list:
+            if name == person.name:
+                person.info()
+                exist = True
+        if not exist:
+            print('{}의 정보가 없습니다.'.format(name))
 
 # ↑ class AddressBook 종료 ↑
 

@@ -1,9 +1,9 @@
 ##### 기본자료형
-a1 = 10     
-a2 = 10.3
-a3 = '500'
-a4 = 'hello'
-a5 = True
+a1 = 10         # 정수(int) 
+a2 = 10.3       # 실수(float)
+a3 = "50"       # 문자열(str)
+a4 = "hello"    # 문자열(str)
+a5 = True       # 논리(bool)
 
 # 자료형 확인하기
 print(type(a1 + a2))
@@ -11,16 +11,9 @@ print(type(a2))
 print(type(a3 + a4))
 print(type(a5))
 
-# 연산하기
-print(a1 + a2)
-print(a2)
-print(a3 + a4)
-print(a5)
-
-# type 변환
-print(int(a2))
-print(float(a2))
-print(int(a3))
+# 연산, 타입변환
+print(a1 + int(a3))
+print(a2 + float(a3))
 
 # 문자열
 s = 'hello'

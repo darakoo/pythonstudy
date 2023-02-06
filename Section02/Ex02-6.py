@@ -1,5 +1,4 @@
-#=====컬렉션:set
-
+# set
 # 'add', 'clear', 'copy', 'difference', 'difference_update', 'discard', 'intersection', 'intersection_update', 
 # 'isdisjoint', 'issubset', 'issuperset', 'pop', 'remove', 
 # 'symmetric_difference', 'symmetric_difference_update', 'union', 'update'
@@ -9,7 +8,7 @@ b = {1,2,3,5}
 print(type(a))
 print(dir(a))
 
-a.add(1)    # 추가 안됨
+a.add(1)    # 중복데이타는 추가 안됨
 a.add(5)    # 추가 됨
 print(a)
 

@@ -1,16 +1,20 @@
-##### 외부 모듈의 활용
-# pip 명령어는 명령프롬프트 창에서 실행해야 한다.
-# pip --help
-# pip list
-# pip show numpy
-# pip install numpy
+# [문제설명]
+# 1~천만까지의 합계를 구하고 소요시간을 출력하는 프로그램입니다.
+# [실행예]
+# 총 합은 50000005000000입니다.
+# 총 0.891691초가 소요되었습니다.
 
-import numpy as np
-s = [1, 2, 3, 4, 5]
-print(np.sum(s))
-# pip uninstall numpy
+# import datetime
+from datetime import *
 
+start = datetime.now()
+total = 0
+for num in range(1, 10000001):
+    total += num
+end = datetime.now()
 
-# 데이터 분석에 많이 사용되는 외부 모듈
-# https://datascienceschool.net/01%20python/01.04%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B6%84%EC%84%9D%EC%9A%A9%20%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%ED%8C%A8%ED%82%A4%EC%A7%80%20%EC%86%8C%EA%B0%9C.html
+elapse = end - start
+elapse = elapse.total_seconds()    # total_seconds() 함수를 통해 소요된 시간을 초단위로 변경한다.
 
+print('총 합은 {}입니다.'.format(total, ','))
+print('총 {}초가 소요되었습니다.'.format(elapse))

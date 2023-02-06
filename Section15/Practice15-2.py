@@ -1,8 +1,5 @@
 # [문제]
-# 실행해보기 skip
 # 사용자로부터 'HH:mm:ss' 형식의 시간을 입력받아서 이를 Watch 클래스의 hour, minute, second 인스턴스 변수에 저장하세요.
-# [실행예]
-
 
 class Watch:
 

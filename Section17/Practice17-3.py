@@ -42,25 +42,6 @@
 # 반환값 : 없음
 # 기능 : 계좌번호, 잔액을 터미널에 출력
 
-
-me = BankAccount('012-34-56789', 50000)
-you = BankAccount('987-65-43210', 50000)
-
-try:
-    print('===이체전===')
-    me.inquiry()
-    you.inquiry()
-    me.withdraw(5000)
-    you.deposit(5000)
-    print('===이체후===')
-    me.inquiry()
-    you.inquiry()
-
-except BankError as e:
-    print(e)
-
-
-'''
 class BankError(Exception):
 
     def __init__(self, message):
@@ -104,4 +85,3 @@ try:
 
 except BankError as e:
     print(e)
-'''

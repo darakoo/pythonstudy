@@ -1,16 +1,16 @@
-#1. 생성자와 소멸자
+#===== 1. 생성자와 소멸자
 
 #1) 생성자
 # 생성자 없는 클래스 만들기
-# class Candy:
-#     def set_info(self, shape, color):
-#         self.shape = shape
-#         self.color = color
+class Candy:
+    def set_info(self, shape, color):
+        self.shape = shape
+        self.color = color
 
-# candy = Candy()
-# candy.set_info('cicle', 'brown')
-# print(candy.shape)
-# print(candy.color)
+candy = Candy()
+candy.set_info('cicle', 'brown')
+print(candy.shape)
+print(candy.color)
 
 # 생성자 있는 클래스 만들기
 # '__' 로 시작 하는 메소드들은 파이썬에 의해서 미리 기능과 역할이 부여된 메소드를 의미한다.
@@ -43,7 +43,7 @@ class USB:
 usb = USB(64)
 usb.info()
 
-# [문제] skip
+# [문제]
 # 다음은 생성자와 소멸자를 이용해서 서비스 안내 메세지를 출력하는 프로그램입니다.
 class Service:
     def __init__(self, service):

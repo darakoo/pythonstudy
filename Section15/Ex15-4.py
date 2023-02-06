@@ -1,13 +1,14 @@
+# 수식계산하기 함수구현과 클래스구현 코드 비교
+
 # 함수로 구현하기
-# def input_expr():
-#     return input('수식을 입력하세요 >> ')
+def input_expr():
+    return input('수식을 입력하세요 >> ')
+def calculate(expr):
+    return eval(expr)
 
-# def calculate(expr):
-#     return eval(expr)
-
-# expr = input_expr()
-# result = calculate(expr) 
-# print(f"수식 결과는 {format(result, ',')}입니다.")
+expr = input_expr()
+result = calculate(expr) 
+print(f"수식 결과는 {format(result, ',')}입니다.")
 
 # 클래스로 구현하기
 class Calculator:

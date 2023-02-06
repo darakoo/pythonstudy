@@ -1,4 +1,4 @@
-#=====컬렉션:tuple
+# tuple
 
 # 'count', 'index'
 a = (100, 3.14, 'hello')

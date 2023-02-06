@@ -1,13 +1,21 @@
-# 예외 처리 : else 문과 finally문
+# 예외 처리하기
+
+# 예외 처리1 : except
+a, b = 3, 0
 try:
-    a = int(input('나누어 질 수를 입력하세요>>>'))
-    b = int(input('나눌 수를 입력하세요>>>'))
-    result = a / b  # 예외가 발생할 수 있는 구문
-except ZeroDivisionError as e:  # 변수 b가 0일 경우
-    print('0으로 나눌수 없습니다. ', e)
-except ValueError as e:         # 변수 a, b가 정수가 아닐 경우 ???
-    print('숫자를 입력하세요. ', e)   
-else:       # 예외가 발생하지 않으면 처리되는 구문
-    print(result)
-finally:
-    print('프로그램을 종료 합니다.')
+    print(a/b)
+except:
+    print('예외가 발생했습니다.')
+
+# 예외 처리2 : 예외메세지 출력
+# a, b = 3, 0 
+a, b = 'a', 0 
+try:
+    print(a/b)
+except ZeroDivisionError as e:
+    print('0으로 나눌 수 없습니다.')
+    print('예외:', e)
+except Exception as e:
+    print('알 수 없는 예외가 발생했습니다.')
+    print('예외:', e)
+

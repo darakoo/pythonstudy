@@ -10,7 +10,7 @@
 # 9x9=81
 
 
-# # 구구단 출력 (중첩 for문 이용) 
+# 구구단 출력 (중첩 for문 이용) 
 for dan in range(2, 10):
     print(f'[{dan}단]')
     for n in range(1, 10):

@@ -1,5 +1,6 @@
-#=====컬렉션:dict
+# dict
 # 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values'
+
 a = {'name':'Tom', 'phone':'01022223333', 'birth': '1118'}
 print(type(a))
 print(dir(a))
